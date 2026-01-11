@@ -1,0 +1,5 @@
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="https://your-link-here.com/logo.png" alt="Company Logo" class="site-logo">
+  </div>
+</nav>
