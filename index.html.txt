@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Support Center</title>
+    <style>
+        :root { --primary: #0052ff; --dark: #1e2329; --light: #f5f7fa; --warning: #ff3b30; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
+        
+        /* Security Banner */
+        .banner { background: var(--warning); color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; }
+        
+        /* Header */
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+        .logo { font-weight: bold; font-size: 24px; color: var(--primary); }
+        
+        /* Hero Section */
+        .hero { background: var(--primary); color: white; padding: 60px 5%; text-align: center; }
+        .hero h1 { margin-bottom: 20px; }
+        .search-box { width: 100%; max-width: 600px; padding: 15px; border-radius: 8px; border: none; font-size: 18px; }
+
+        /* FAQ Section */
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .faq-item { background: white; margin-bottom: 10px; border-radius: 8px; border: 1px solid #eee; overflow: hidden; }
+        .faq-question { padding: 20px; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { background: #fcfcfc; }
+        .faq-answer { padding: 0 20px 20px; display: none; color: #555; border-top: 1px solid #f9f9f9; }
+        
+        /* Contact Form */
+        .contact-section { background: white; padding: 40px; border-radius: 12px; margin-top: 50px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        form input, form textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { background: var(--primary); color: white; border: none; padding: 15px 30px; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <div class="banner">🚨 WARNING: Support will NEVER DM you first or ask for your Seed Phrase/Secret Keys.</div>
+
+    <header>
+        <div class="logo">SupportPortal</div>
+        <nav>Official Help Center</nav>
+    </header>
+
+    <section class="hero">
+        <h1>How can we help you?</h1>
+        <input type="text" class="search-box" placeholder="Search for articles (e.g., 'security')...">
+    </section>
+
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Will support ever ask for my private keys or seed phrase? <span>+</span></div>
+            <div class="faq-answer"><strong>Absolutely not.</strong> We will never ask for your recovery phrase, password, or private keys. If anyone asks for these, they are attempting to steal your funds.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What should I do if I suspect unauthorized activity? <span>+</span></div>
+            <div class="faq-answer">Immediately move remaining funds to a new wallet, revoke smart contract permissions using Revoke.cash, and change your passwords.</div>
+        </div>
+
+        <div class="contact-section">
+            <h3>Still need help?</h3>
+            <p>Fill out the form below and our team will get back to you within 24-48 hours.</p>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email Address" required>
+                <textarea rows="5" placeholder="Describe your issue..."></textarea>
+                <button type="submit">Send Support Ticket</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                answer.style.display = isOpen ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
